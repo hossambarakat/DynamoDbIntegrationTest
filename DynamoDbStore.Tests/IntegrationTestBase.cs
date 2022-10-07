@@ -9,8 +9,8 @@ namespace DynamoDbStore.Tests;
 public class IntegrationTestBase: IAsyncLifetime
 {
     protected const string TABLE_NAME = "Persons";
-    protected AmazonDynamoDBClient client;
-    private TestcontainersContainer _testContainer;
+    protected AmazonDynamoDBClient client = null!;
+    private TestcontainersContainer _testContainer = null!;
 
     public virtual async Task InitializeAsync()
     {
