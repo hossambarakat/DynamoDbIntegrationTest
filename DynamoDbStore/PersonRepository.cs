@@ -7,11 +7,11 @@ namespace DynamoDbStore;
 public class Person
 {
     [DynamoDBHashKey("id")] //Partition key
-    public string Id { get; set; }
+    public string Id { get; set; } = null!;
     [DynamoDBProperty]
-    public string FirstName { get; set; }
+    public string FirstName { get; set; } = null!;
     [DynamoDBProperty]
-    public string LastName { get; set; }
+    public string LastName { get; set; } = null!;
 }
 
 public class PersonRepository
